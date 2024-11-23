@@ -1,17 +1,17 @@
 ## Task 1 ##
 def check_sorted(arr):
-    is_non_ascending = True
-    is_non_descending = True
+    non_ascending = True
+    non_descending = True
     for i in range(1, len(arr)):
         if arr[i] > arr[i - 1]:
-            is_non_ascending = False
+            non_ascending = False
         if arr[i] < arr[i - 1]:
-            is_non_descending = False
-    if is_non_ascending and is_non_descending:
+            non_descending = False
+    if non_ascending and non_descending:
         return 2
-    elif is_non_descending:
+    elif non_descending:
         return 1
-    elif is_non_ascending:
+    elif non_ascending:
         return -1
     else:
         return 0
